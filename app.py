@@ -1,4 +1,5 @@
 # Import necessary libraries
+import os
 import pandas as pd
 import numpy as np
 import re
@@ -10,7 +11,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.utils import to_categorical
 
 # Load the dataset
-data = pd.read_csv('tweets_dataset.csv')
+data = pd.read_csv(os.path.join('data', 'tweets_dataset.csv'))
 
 # Preprocess the data
 def preprocess_text(text):
